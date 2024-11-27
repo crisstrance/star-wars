@@ -1,2 +1,2 @@
-release: pipenv run upgrade
-web: gunicorn wsgi --chdir ./src/
+release: pipenv install --deploy --ignore-pipfile
+web: gunicorn wsgi:application --chdir ./src
